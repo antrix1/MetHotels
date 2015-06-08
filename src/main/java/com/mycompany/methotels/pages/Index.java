@@ -20,7 +20,7 @@ import java.util.Date;
  */
 public class Index
 {
-	@Inject
+        @Inject
 	private Logger logger;
 
 	@Inject
@@ -46,13 +46,6 @@ public class Index
 				null;
 	}
 
-
-	Object onActionFromLearnMore()
-	{
-		about.setLearn("LearnMore");
-
-		return  about;
-	}
 
 	@Log
 	void onComplete()

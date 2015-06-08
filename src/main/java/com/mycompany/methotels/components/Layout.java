@@ -14,6 +14,7 @@ import org.apache.tapestry5.SymbolConstants;
 /**
  * Layout component for pages of application test-project.
  */
+
 @Import(module="bootstrap/collapse")
 public class Layout
 {
@@ -46,7 +47,7 @@ public class Layout
 
 	public String[] getPageNames()
 	{
-		return new String[]{"Index", "About", "Contact"};
+		return new String[]{"Index", "About", "Contact", "DodajSobu"};
 	}
 
 }
