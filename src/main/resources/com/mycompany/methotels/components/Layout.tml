@@ -63,7 +63,7 @@
 
         <div class="footer">
             <span class="pull-left" id="footer_cp"> &copy; MetHotels 2015</span>
-            <a class="pull-right" href="https://github.com/antrix1/methotels" style="margin-right:10px;"><img src="${asset:context:images/GitHub-Logo.png}" width="40" height="40"/></a>
+            <a id="git" class="pull-right" href="https://github.com/antrix1/methotels" style="margin-right:10px;"><img src="${asset:context:images/GitHub-Logo.png}" width="40" height="40"/></a>
         </div>
 </body>
 </html>

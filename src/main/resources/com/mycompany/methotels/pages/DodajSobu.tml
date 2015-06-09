@@ -2,6 +2,6 @@
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
       xmlns:p="tapestry:parameter">
 
-      <t:beaneditform object="soba"/>
-      <t:grid t:source="sobe"/>
+      <t:beaneditform object="soba" exclude="id"/>
+      <t:grid t:source="sobe" exclude="id"/>
 </html>
