@@ -1,7 +1,11 @@
-<html t:type="layout" title="Contact com.mycompany"
+<html t:type="layout" title="Dodaj Sobu"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
       xmlns:p="tapestry:parameter">
 
-      <t:beaneditform object="soba" exclude="id"/>
-      <t:grid t:source="sobe" exclude="id"/>
+    <t:beaneditform object="soba" exclude="sobaId"></t:beaneditform>
+      <t:grid t:source="sobe" exclude="sobaId" add="delete" row="iterator">
+          <p:deleteCell>
+              <t:actionLink t:id="delete" context="iterator.sobaid">Delete</t:actionLink>
+          </p:deleteCell>
+      </t:grid>
 </html>
