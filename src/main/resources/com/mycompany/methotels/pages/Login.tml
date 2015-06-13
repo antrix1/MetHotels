@@ -4,11 +4,12 @@
 
 <div class="row">
     <div class="span4 offset3">
-        <t:form t:id="login" class="form-signin">
+        <t:form t:id="form" object="userLogin" exclude="userId, rola, ime, prezime" class="form-signin" submitlabel="Login">
             <h2 class="form-signin-heading">Please sign in</h2>
-            <t:textfield t:id="email" value="emailValue" class="input-block-level" validate="required" placeholder="Email address" />
-            <t:passwordfield t:id="password" value="passwordValue" class="input-block-level" validate="required" placeholder="Password" />
-            <t:submit class="btn btn-large btn-primary" value="Sign in" />
+            <p:sifra>
+                <t:label for="sifra"/>
+                <t:passwordfield t:id="sifra" value="userLogin.sifra"/>
+            </p:sifra>
         </t:form>
     </div>
 </div>

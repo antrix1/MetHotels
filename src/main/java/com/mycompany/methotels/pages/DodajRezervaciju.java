@@ -9,10 +9,11 @@ import com.mycompany.methotels.dao.RezervacijaDAO;
 import com.mycompany.methotels.dao.SobaDAO;
 import com.mycompany.methotels.entities.Rezervacija;
 import com.mycompany.methotels.entities.Soba;
+import com.mycompany.methotels.services.ProtectedPage;
 import java.util.ArrayList;
 import java.util.List;
+import javax.annotation.security.RolesAllowed;
 import org.apache.tapestry5.ValueEncoder;
-import org.apache.tapestry5.annotations.Persist;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.hibernate.annotations.CommitAfter;
 import org.apache.tapestry5.ioc.annotations.Inject;
@@ -21,6 +22,8 @@ import org.apache.tapestry5.ioc.annotations.Inject;
  *
  * @author Andrej
  */
+@ProtectedPage
+@RolesAllowed(value="Korisnik")
 public class DodajRezervaciju {
 
     @Inject

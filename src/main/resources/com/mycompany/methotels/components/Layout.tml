@@ -34,10 +34,14 @@
                     </t:any>
                 </t:loop>
             </ul>
-            <span class="navbar-right">
-                <li>
-                    <t:pagelink page="login" class="btn btn-default navbar-btn">Sign in</t:pagelink>
-               	</li>
+            <span class="navbar-right btn btn-default">
+                <t:if test="!loggedIn">
+                        <t:pagelink page="login">Sign in</t:pagelink>
+                </t:if>
+                
+                <t:if test="loggedIn">
+                        <t:actionlink t:id="logout" class="btn-btn-default navbar-btn">Sign out</t:actionlink>
+                </t:if>
             </span>
 
         </div><!--/.nav-collapse -->

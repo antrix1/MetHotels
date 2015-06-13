@@ -1,5 +1,6 @@
 package com.mycompany.methotels.components;
 
+import com.mycompany.methotels.entities.User;
 import org.apache.tapestry5.*;
 import org.apache.tapestry5.alerts.AlertManager;
 import org.apache.tapestry5.annotations.*;
@@ -18,6 +19,10 @@ import org.apache.tapestry5.SymbolConstants;
 @Import(module="bootstrap/collapse")
 public class Layout
 {
+    
+        @SessionState
+        private User loggedInUser;
+        
 	@Inject
 	private ComponentResources resources;
 
@@ -47,7 +52,17 @@ public class Layout
 
 	public String[] getPageNames()
 	{
-		return new String[]{"Index", "About", "Contact", "DodajSobu", "DodajRezervaciju"};
+		return new String[]{"Index", "DodajSobu", "DodajRezervaciju", "RegistrujKorisnika"};
 	}
 
+       public boolean getLoggedIn() {
+        if (loggedInUser.getEmail() != null) {
+            return true;
+        }
+        return false;
+        }
+
+        public void onActionFromLogout() {
+            loggedInUser = null;
+        }
 }
